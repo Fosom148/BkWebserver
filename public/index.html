@@ -2,111 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Manga Hub</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(180deg, #1e3799, #0c2461);
-            color: white;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            font-size: 24px;
-        }
-
-        nav {
-            background-color: #4CAF50;
-            overflow: hidden;
-            text-align: center;
-        }
-
-        nav a {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 18px;
-            margin: 0 10px;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        section {
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .manga-card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            margin: 10px;
-            width: 30%;
-            background-color: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .manga-card:hover {
-            transform: scale(1.05);
-        }
-
-        .manga-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .manga-card-content {
-            padding: 20px;
-        }
-
-        .manga-card-content h2 {
-            color: #333;
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .manga-card-content p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 1em;
-            font-size: 16px;
-        }
-        
-        .tab-content {
-            display: none;
-        }
-
-        .tab-content.active {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -136,7 +34,9 @@
 
     <section class="home tab-content active">
         <div class="manga-card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Berserk_vol01.png" alt="Berserk">
+            <a href="https://readberserk.com/chapter/berserk-chapter-001/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Berserk_vol01.png" alt="Berserk">
+            </a>
             <div class="manga-card-content">
                 <h2>Berserk</h2>
                 <p>
@@ -146,7 +46,9 @@
         </div>
 
         <div class="manga-card">
-            <img src="https://m.media-amazon.com/images/M/MV5BM2M2NDIzOTItZDA1Yy00M2Q4LTk3ZjctZjZmZjUyZWMxM2YyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg" alt="Reincarnated as a Slime">
+            <a href="https://tenseishitaraslimedattake.online/manga/shitara-slime-chapter-1/?date=2023-12-08" target="_blank">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2M2NDIzOTItZDA1Yy00M2Q4LTk3ZjctZjZmZjUyZWMxM2YyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg" alt="Reincarnated as a Slime">
+            </a>
             <div class="manga-card-content">
                 <h2>Reincarnated as a Slime</h2>
                 <p>
@@ -156,7 +58,9 @@
         </div>
 
         <div class="manga-card">
-            <img src="https://m.media-amazon.com/images/S/pv-target-images/6b2da01d72a8637368910c3f868929cabf40915ed38cc94ba4849bc4aa31354a.jpg" alt="One Punch Man">
+            <a href="https://w18.mangaonepunch.com/manga/one-punch-man-chapter-1/" target="_blank">
+                <img src="https://m.media-amazon.com/images/S/pv-target-images/6b2da01d72a8637368910c3f868929cabf40915ed38cc94ba4849bc4aa31354a.jpg" alt="One Punch Man">
+            </a>
             <div class="manga-card-content">
                 <h2>One Punch Man</h2>
                 <p>

@@ -1,0 +1,7 @@
+authtoken: 2ZFHTXOyq7g99YyNO73voFSzGy6_4qVDaMNbDQP3fdEDteYK3
+version: 2
+tunnels:
+  manga-hub:
+    subdomain: fosommangahub
+    proto: http
+    addr: 3000

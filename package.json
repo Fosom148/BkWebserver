@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    // other scripts...
-  },
+   
   "keywords": [],
   "author": "",
   "license": "ISC",

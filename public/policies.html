@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Policies</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background: linear-gradient(45deg, #000000, #1a1a1a); /* Fancy black gradient */
+            background-size: 400% 400%;
+            animation: gradientAnimation 20s ease infinite;
+            transition: background 0.5s ease;
+        }
+
+        @keyframes gradientAnimation {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Container Styles */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .container:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Title Styles */
+        .title {
+            color: #2c3e50;
+            margin-top: 20px;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        /* Section Heading Styles */
+        .section-heading {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 20px;
+            color: #3498db;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        /* Paragraph Styles */
+        .paragraph {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            color: #555;
+            text-align: justify;
+        }
+
+        /* Table Styles */
+        .table-container {
+            width: 100%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        /* Table Header Styles */
+        .table-header th {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Disclaimer and Responsibility Title Styles */
+        .section-title {
+            color: #e74c3c;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Updated Disclaimer Styles */
+        .disclaimer {
+            background-color: #f9f9f9;
+            color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            line-height: 1.6;
+            margin-top: 10px;
+            border: 2px solid #ecf0f1;
+        }
+
+        /* Home Button Styles */
+        .home-button {
+            position: fixed;
+            z-index: 1000;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+
+        .home-button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Adjusted styles for better visibility on mobile */
+        @media only screen and (max-width: 600px) {
+            .home-button {
+                bottom: 10px;
+                right: 10px;
+                font-size: 1em;
+                padding: 8px 12px;
+            }
+
+            .paragraph,
+            .section-heading {
+                text-align: left;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="title">Website Policies</h1>
+
+        <h2 class="section-heading" id="section-one">Purpose</h2>
+        <p class="paragraph">
+            This website is dedicated to providing manga readers with the ability to read a diverse range of manga content. Our overarching goal is to create an accessible platform where users can freely engage and enjoy the manga of their choosing.
+        </p>
+
+        <!-- Section Two Heading -->
+        <h2 class="section-heading" id="section-two">Terms and Conditions</h2>
+        <p class="paragraph">
+            It is imperative to underscore that we, as the operators of this website, explicitly disclaim any and all responsibility for the veracity, legality, or reliability of the sources mentioned on our platform. Users are strongly encouraged to exercise discernment and diligence in assessing the terms and conditions associated with external sources they may navigate to through the hyperlinks provided on our website.
+        </p>
+
+        <!-- Updated Title Styles -->
+        <h2 class="section-title" id="section-three">Disclaimer</h2>
+        <div class="disclaimer">
+            We do not host any content on our website.
+        </div>
+
+        <h2 class="section-title" id="section-four">Responsibility</h2>
+        <div class="disclaimer">
+            We explicitly disclaim any responsibility for the accuracy, legality, or appropriateness of content provided by external sources mentioned on our website. Users should exercise due diligence and be cognizant of the terms and conditions of any external sources they choose to explore through the links provided on our platform.
+        </div>
+
+    </div>
+
+    <!-- Home Button -->
+    <button class="home-button" onclick="redirectToHomePage()">Home</button>
+
+    <script>
+        // Redirect to home page function
+        function redirectToHomePage() {
+            window.location.href = 'https://deep-buck-sound.ngrok-free.app/'; // Update with the actual home page URL
+        }
+    </script>
+
+</body>
+</html>

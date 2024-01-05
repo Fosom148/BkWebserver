@@ -1,90 +1,187 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Manga Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/indexstyles.css">
 </head>
+
 <body>
 
-    <header>
-        Manga Hub
-    </header>
+    <!-- Sidebar -->
+    <div class="sidebar" id="mySidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="#" onclick="location.reload(true);">Home</a>
+        <a href="/categories">Categories</a>
+        <a href="/maintenance">Animes</a>
+        <a href="#" onclick="toggleSubcategories('trendingSubcategories')">Trending</a>
+        <ul class="subcategories" id="trendingSubcategories" style="display: none;">
+            <li><a href="/maintenance">Manga</a></li>
+            <li><a href="/maintenance">Web Novels</a></li>
+            <li><a href="/maintenance">Manhwas</a></li>
+            <li><a href="/maintenance">Light Novels</a></li>
+            <li><a href="/maintenance">Fanfic</a></li>
+        </ul>
+        <a href="#" onclick="toggleSubcategories('upcomingSubcategories')">Upcoming</a>
+        <ul class="subcategories" id="upcomingSubcategories" style="display: none;">
+            <li><a href="/maintenance">Manga</a></li>
+            <li><a href="/maintenance">Web Novels</a></li>
+            <li><a href="/maintenance">Manhwa</a></li>
+            <li><a href="/maintenance">Light Novels</a></li>
+            <li><a href="/maintenance">Fanfic</a></li>
+        </ul>
+        <a href="/policies">About Us</a>
+    </div>
 
-    <nav>
-        <a href="#" onclick="showTab('home')">Home</a>
-        <a href="#" onclick="showTab('trending')">Trending Manga</a>
-        <a href="#" onclick="showTab('upcoming')">Upcoming Mangas</a>
-        <a href="#" onclick="showTab('mylist')">My Manga List</a>
-        <script>
-            function showTab(tabName) {
-                var tabs = document.querySelectorAll('.tab-content');
-                tabs.forEach(function(tab) {
-                    tab.classList.remove('active');
-                });
+    <!-- Content -->
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search..." oninput="searchManga()">
+        <span class="search-btn" onclick="searchManga()">
+            <i class="fas fa-search search-icon"></i>
+        </span>
+        <button class="open-btn" onclick="openSidebar()">&#9776; </button>
+    </div>
 
-                var activeTab = document.querySelector('.' + tabName);
-                if (activeTab) {
-                    activeTab.classList.add('active');
-                }
-            }
-        </script>
-    </nav>
-
-    <section class="home tab-content active">
+    <div class="container" id="manga-container">
+        <!-- Berserk manga card -->
         <div class="manga-card">
             <a href="https://readberserk.com/chapter/berserk-chapter-001/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/en/4/4a/Berserk_vol01.png" alt="Berserk">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/Berserk_vol01.png/220px-Berserk_vol01.png"
+                    alt="Berserk">
             </a>
             <div class="manga-card-content">
                 <h2>Berserk</h2>
-                <p>
-                    The series follows the story of Guts, a mercenary warrior drawn into the world of the God Hand, powerful beings who rule the supernatural realm.
-                </p>
+                <p>.</p>
+                <div class="redirect-button"
+                    onclick="redirect('https://readberserk.com/chapter/berserk-chapter-001/')">Read</div>
             </div>
         </div>
 
-        <div class="manga-card">
-            <a href="https://tenseishitaraslimedattake.online/manga/shitara-slime-chapter-1/?date=2023-12-08" target="_blank">
-                <img src="https://m.media-amazon.com/images/M/MV5BM2M2NDIzOTItZDA1Yy00M2Q4LTk3ZjctZjZmZjUyZWMxM2YyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg" alt="Reincarnated as a Slime">
+        <!-- That time I got reincarnated as a slime -->
+        <div class="manga-card" data-genre="Action Isekai">
+            <a href="https://tenseishitaraslimedattake.online/manga/shitara-slime-chapter-1/?date=2023-12-08"
+                target="_blank">
+                <img src="https://m.media-amazon.com/images/M/MV5BM2M2NDIzOTItZDA1Yy00M2Q4LTk3ZjctZjZmZjUyZWMxM2YyXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg"
+                    alt="Reincarnated as a Slime">
             </a>
             <div class="manga-card-content">
-                <h2>Reincarnated as a Slime</h2>
-                <p>
-                    The story follows Satoru Mikami, a salaryman who is murdered and then reincarnated in a sword and sorcery world as a titular slime, who goes on to gather allies to build his own nation of monsters.
-                </p>
+                <h2>That time I got reincarnated as a slime</h2>
+                <p>.</p>
+                <div class="redirect-button"
+                    onclick="redirect('https://tenseishitaraslimedattake.online/manga/shitara-slime-chapter-1/?date=2023-12-08')">Read</div>
             </div>
         </div>
 
-        <div class="manga-card">
+        <!-- One Punch Man -->
+        <div class="manga-card" data-genre="Action">
             <a href="https://w18.mangaonepunch.com/manga/one-punch-man-chapter-1/" target="_blank">
-                <img src="https://m.media-amazon.com/images/S/pv-target-images/6b2da01d72a8637368910c3f868929cabf40915ed38cc94ba4849bc4aa31354a.jpg" alt="One Punch Man">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/OnePunchMan_manga_cover.png/220px-OnePunchMan_manga_cover.png"
+                    alt="One Punch Man">
             </a>
             <div class="manga-card-content">
                 <h2>One Punch Man</h2>
-                <p>
-                    It tells the story of Saitama, a superhero who, because he can defeat any opponent with a single punch, grows bored from a lack of challenge.
-                </p>
+                <p>.</p>
+                <div class="redirect-button"
+                    onclick="redirect('https://w18.mangaonepunch.com/manga/one-punch-man-chapter-1/')">Read</div>
             </div>
         </div>
-    </section>
 
-    <section class="trending tab-content">
-        <p>Trending Manga content will be displayed here.</p>
-    </section>
+        <!-- My Hero Academia -->
+        <div class="manga-card" data-genre="Action">
+            <a href="https://readherooacademia.online/manga/my-hero-academia-chapter-1/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Boku_no_Hero_Academia_Volume_1.png/220px-Boku_no_Hero_Academia_Volume_1.png"
+                    alt="My Hero Academia">
+            </a>
+            <div class="manga-card-content">
+                <h2>My Hero Academia</h2>
+                <p></p>
+                <div class="redirect-button"
+                    onclick="redirect('https://readherooacademia.online/manga/my-hero-academia-chapter-1/')">Read</div>
+            </div>
+        </div>
 
-    <section class="upcoming tab-content">
-        <p>Upcoming Manga content will be displayed here.</p>
-    </section>
+        <!-- Jujutsu Kaisen -->
+        <div class="manga-card" data-genre="Action">
+            <a href="https://w1.jujmanga.com/manga/jujutsu-kaisen-chapter-1-11/" target="_blank">
+                <img src="https://r-world.online/images/lBYaq9DMMu04MDItRXNY1611754547.jpg" alt="Jujutsu Kaisen">
+            </a>
+            <div class="manga-card-content">
+                <h2>Jujutsu Kaisen</h2>
+                <p></p>
+                <div class="redirect-button"
+                    onclick="redirect('https://w1.jujmanga.com/manga/jujutsu-kaisen-chapter-1-11/')">Read</div>
+            </div>
+        </div>
 
-    <section class="mylist tab-content">
-        <p>My Manga List content will be displayed here.</p>
-    </section>
+        <!-- Chainsaw Man -->
+        <div class="manga-card" data-genre="Action">
+            <a href="https://ww5.chainsaw-man-manga.online/manga/chainsaw-man-chapter-1/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Chainsawman.jpg/220px-Chainsawman.jpg"
+                    alt="Chainsaw Man">
+            </a>
+            <div class="manga-card-content">
+                <h2>Chainsaw Man</h2>
+                <p> .</p>
+                <div class="redirect-button"
+                    onclick="redirect('https://ww5.chainsaw-man-manga.online/manga/chainsaw-man-chapter-1/')">Read</div>
+            </div>
+        </div>
 
-    <footer>
-        &copy; 2023 Manga Hub | All Rights Reserved
-    </footer>
+        <!-- Add more anime cards here -->
 
+    </div>
+
+    <script>
+        // Redirect if the pathname is '/index.html'
+        if (window.location.pathname === '/index.html') {
+            window.location.replace('/home');
+        }
+
+        function toggleSubcategories(subcategoriesId) {
+            var subcategories = document.getElementById(subcategoriesId);
+            if (subcategories.style.display === "none") {
+                subcategories.style.display = "block";
+            } else {
+                subcategories.style.display = "none";
+            }
+        }
+
+        function openSidebar() {
+            document.getElementById("mySidebar").style.width = "200px";
+            document.querySelector('.open-btn').style.opacity = '0';
+        }
+
+        function closeSidebar() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.querySelector('.open-btn').style.opacity = '1';
+        }
+
+        function searchManga() {
+            var input = document.getElementById('search-input').value.toLowerCase();
+            var mangaCards = document.querySelectorAll('.manga-card');
+
+            mangaCards.forEach(function (card) {
+                var title = card.querySelector('h2').innerText.toLowerCase();
+                var description = card.querySelector('.manga-card-content p').innerText.toLowerCase();
+
+                if (title.includes(input) || description.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        function redirect(url) {
+            window.open(url, '_blank');
+        }
+
+        // Trigger search dynamically as the user types
+        document.getElementById('search-input').addEventListener('input', searchManga);
+    </script>
 </body>
+
 </html>

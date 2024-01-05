@@ -1,12 +1,11 @@
-{
-  "name": "my-web-server",
+ "name": "my-web-server",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js" // Adjust this script based on your entry file
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Your Name",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.4",
@@ -25,26 +24,5 @@
     "node-fetch": "^3.3.2",
     "path": "^0.12.7"
   },
-  "description": "Your project description",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/your-repository.git"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/your-repository/issues"
-  },
-  "homepage": "https://github.com/your-username/your-repository#readme",
-  "engines": {
-    "node": ">=10.0.0"
-  },
-  "engines": {
-    "npm": ">=6.0.0"
-  },
-  "engines": {
-    "node": "14.x" // Specify the Node.js version supported by Azure
-  },
-  "scripts": {
-    "start": "node server.js",
-    "prestart": "npm install --production" // Install only production dependencies on Azure
-  }
+  "description": ""
 }
